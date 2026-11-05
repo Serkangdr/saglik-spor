@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0c0c0c" />
+    <title>SAĞLIK SPOR</title>
+    <meta name="description" content="Sağlık Spor — Eski okul ruhu. Modern konfor yok." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23c44532'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='50' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/projeler/saglik-spor.css" />
+    <noscript>
+      <style>
+        .preloader {
+          display: none;
+        }
+      </style>
+    </noscript>
+
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/vendor/lenis.min.js" defer></script>
+    <script src="assets/js/projeler/saglik-spor.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#icerik">İçeriğe geç</a>
+
+    <!-- Açılış: sayaç + perde (JS yoksa CSS kendiliğinden kaldırır) -->
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__row">
+        <span class="preloader__name">SAĞLIK SPOR</span>
+        <span class="preloader__count" data-count>000</span>
+      </div>
+      <div class="preloader__bar"><i></i></div>
+    </div>
+
+    <div class="cursor" aria-hidden="true"></div>
+
+    <header class="hdr">
+      <a class="hdr__logo" href="#top">SAĞLIK SPOR</a>
+      <nav class="hdr__nav" aria-label="Sayfa içi">
+        <a href="#uyelik"><span>Üyelik</span></a>
+        <a href="#iletisim"><span>İletişim</span></a>
+        <a href="#saatler"><span>Saatler</span></a>
+      </nav>
+      <p class="hdr__status" data-status hidden></p>
+      <button
+        class="hdr__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobilMenu"
+        data-menu-toggle
+      >
+        <span class="hdr__toggle-open">Menü</span>
+        <span class="hdr__toggle-close">Kapat</span>
+      </button>
+    </header>
+
+    <nav class="menu" id="mobilMenu" aria-label="Mobil menü">
+      <a href="#uyelik">Üyelik</a>
+      <a href="#iletisim">İletişim</a>
+      <a href="#saatler">Saatler</a>
+    </nav>
+
+    <main id="icerik">
+      <!-- 01 · HERO -->
+      <section class="hero" id="top">
+        <div class="hero__slides" data-hero-slides>
+          <div
+            class="slide is-active"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1544955752-78051eb9b0b8?q=80&w=1920&auto=format&fit=crop');
+            "
+          ></div>
+        </div>
+
+        <div class="hero__inner">
+          <p class="hero__est" data-hero-fade>1998'DEN BERİ</p>
+
+          <div class="hero__tag" data-hero-fade>
+            <p class="hero-subtitle">ESKİ OKUL RUHU. MODERN KONFOR YOK.</p>
+          </div>
+
+          <h1 class="hero__title" aria-label="SAĞLIK SPOR">
+            <span class="hero__line" aria-hidden="true"><span data-split>SAĞLIK</span></span>
+            <span class="hero__line hero__line--outline" aria-hidden="true"
+              ><span data-split>SPOR</span></span
+            >
+          </h1>
+
+          <div class="hero__side" data-hero-fade>
+            <p class="hero__counter" aria-hidden="true">
+              <b data-slide-current>01</b><span>/</span><span data-slide-total>06</span>
+            </p>
+            <span class="hero__progress" aria-hidden="true"><i data-slide-progress></i></span>
+            <a class="hero__scroll" href="#uyelik">
+              <span>Kaydır</span>
+              <svg viewBox="0 0 12 20" aria-hidden="true" focusable="false">
+                <path
+                  d="M6 1v17M1 13l5 5 5-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · KAYAN BANT -->
+      <section class="tape" aria-label="Slogan">
+        <div class="tape__band tape__band--ghost" aria-hidden="true">
+          <div class="tape__track" data-marquee="-1">
+            <span
+              >/// NO PAIN NO GAIN /// SAĞLIK İÇİN /// MAZERETLERİ KAPIDA BIRAK /// SADECE DEMİR VE
+              SEN ///</span
+            >
+            <span
+              >/// NO PAIN NO GAIN /// SAĞLIK İÇİN /// MAZERETLERİ KAPIDA BIRAK /// SADECE DEMİR VE
+              SEN ///</span
+            >
+          </div>
+        </div>
+        <div class="tape__band tape__band--rust">
+          <div class="tape__track" data-marquee="1">
+            <span class="marquee-item"
+              >/// NO PAIN NO GAIN /// SAĞLIK İÇİN /// MAZERETLERİ KAPIDA BIRAK /// SADECE DEMİR VE
+              SEN ///</span
+            >
+            <span class="marquee-item" aria-hidden="true"
+              >/// NO PAIN NO GAIN /// SAĞLIK İÇİN /// MAZERETLERİ KAPIDA BIRAK /// SADECE DEMİR VE
+              SEN ///</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · ÜYELİK PLANLARI -->
+      <section class="plans" id="uyelik">
+        <div class="plans__head">
+          <span class="idx" aria-hidden="true">(01)</span>
+          <h2 class="plans__title" data-reveal-words>Üyelik Planları</h2>
+          <div class="tabs" role="tablist" aria-label="Üyelik türü">
+            <button
+              type="button"
+              class="tab-btn is-active"
+              role="tab"
+              id="tab-standart"
+              aria-selected="true"
+              aria-controls="standart"
+              data-tab="standart"
+            >
+              STANDART
+            </button>
+            <button
+              type="button"
+              class="tab-btn"
+              role="tab"
+              id="tab-ogrenci"
+              aria-selected="false"
+              aria-controls="ogrenci"
+              tabindex="-1"
+              data-tab="ogrenci"
+            >
+              ÖĞRENCİ
+            </button>
+            <button
+              type="button"
+              class="tab-btn"
+              role="tab"
+              id="tab-sabah"
+              aria-selected="false"
+              aria-controls="sabah"
+              tabindex="-1"
+              data-tab="sabah"
+            >
+              SABAH KUŞU
+            </button>
+            <span class="tabs__ind" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div
+          id="standart"
+          class="tab-content is-active"
+          role="tabpanel"
+          aria-labelledby="tab-standart"
+        >
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">01</span>
+            <span class="period">1 AY</span>
+            <span class="price">1.500 ₺</span>
+            <span class="desc">Taahhüt Yok. Nakit.</span>
+          </article>
+          <article class="price-card price-card--pick">
+            <span class="price-card__no" aria-hidden="true">02</span>
+            <span class="period">3 AY</span>
+            <span class="price">4.000 ₺</span>
+            <span class="desc">Popüler Seçim.</span>
+          </article>
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">03</span>
+            <span class="period">6 AY</span>
+            <span class="price">7.500 ₺</span>
+            <span class="desc">Ciddi Olanlar İçin.</span>
+          </article>
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">04</span>
+            <span class="period">1 YIL</span>
+            <span class="price">14.000 ₺</span>
+            <span class="desc">Gerçek Demirci.</span>
+          </article>
+        </div>
+
+        <div id="ogrenci" class="tab-content" role="tabpanel" aria-labelledby="tab-ogrenci">
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">01</span>
+            <span class="period">1 AY</span>
+            <span class="price">1.200 ₺</span>
+            <span class="desc">Öğrenci Kimliği Şart.</span>
+          </article>
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">02</span>
+            <span class="period">3 AY</span>
+            <span class="price">3.200 ₺</span>
+            <span class="desc">Dönemlik Paket.</span>
+          </article>
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">03</span>
+            <span class="period">6 AY</span>
+            <span class="price">6.000 ₺</span>
+            <span class="desc">Sınav Stresine Birebir.</span>
+          </article>
+          <article class="price-card">
+            <span class="price-card__no" aria-hidden="true">04</span>
+            <span class="period">1 YIL</span>
+            <span class="price">11.000 ₺</span>
+            <span class="desc">Okul Biter Kas Kalır.</span>
+          </article>
+        </div>
+
+        <div id="sabah" class="tab-content" role="tabpanel" aria-labelledby="tab-sabah">
+          <article class="price-card price-card--morning">
+            <span class="price-card__no" aria-hidden="true">01</span>
+            <span class="period">AYLIK</span>
+            <span class="price price--muted">1.000 ₺</span>
+            <span class="desc">06:00 - 11:00 Arası Giriş</span>
+          </article>
+          <article class="price-card price-card--morning">
+            <span class="price-card__no" aria-hidden="true">02</span>
+            <span class="period">3 AYLIK</span>
+            <span class="price price--muted">2.800 ₺</span>
+            <span class="desc">Erken Kalkan Yol Alır</span>
+          </article>
+          <article class="price-card price-card--warn">
+            <span class="price-card__no" aria-hidden="true">!</span>
+            <span class="period">UYARI</span>
+            <span class="desc"
+              >Bu paket sadece sabah saatlerinde geçerlidir. Akşam girişlerinde turnike
+              açılmaz.</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- 04 · İLETİŞİM & KONUM -->
+      <section class="contact-location" id="iletisim">
+        <div class="contact-box">
+          <div
+            class="contact-box__bg"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1400&auto=format&fit=crop');
+            "
+            data-parallax
+          ></div>
+          <div class="contact-content">
+            <span class="idx" aria-hidden="true">(02)</span>
+            <h2 data-reveal-words>SALON SAHİBİNE ULAŞ</h2>
+            <p class="contact-lead" data-reveal>
+              Telefona bakamıyorum, antrenmandayım. Buradan yaz.
+            </p>
+            <form class="contact-form" data-reveal>
+              <label class="field">
+                <span class="field__no" aria-hidden="true">01</span>
+                <input
+                  type="text"
+                  placeholder="ADIN SOYADIN"
+                  aria-label="Adın soyadın"
+                  autocomplete="name"
+                />
+              </label>
+              <label class="field">
+                <span class="field__no" aria-hidden="true">02</span>
+                <input
+                  type="tel"
+                  placeholder="TELEFON NUMARAN"
+                  aria-label="Telefon numaran"
+                  autocomplete="tel"
+                />
+              </label>
+              <label class="field">
+                <span class="field__no" aria-hidden="true">03</span>
+                <textarea rows="3" placeholder="DERDİN NE?" aria-label="Mesajın"></textarea>
+              </label>
+              <button type="button" class="submit-btn">
+                <span>GÖNDER</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M3 12h17M14 6l6 6-6 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="map-box">
+          <iframe
+            title="Sağlık Spor konumu"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650490010904!2d29.0232493!3d40.9902677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab86315555555%3A0x23456789!2d29.0232493!3d40.9902677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- 05 · FOOTER -->
+    <footer class="main-footer" id="saatler">
+      <div class="footer-container">
+        <div class="footer-col" data-reveal>
+          <h3>SAĞLIK</h3>
+          <p>
+            Modern dünyanın yumuşaklığından kaçanlar için bir sığınak. Klima yok, WiFi yok, sadece
+            saf güç ve demir var. 1998'den beri aynı bodrum katındayız.
+          </p>
+          <p class="footer-tag">#MazeretYok</p>
+        </div>
+
+        <div class="footer-col" data-reveal>
+          <h3>KURALLAR</h3>
+          <ul class="footer-links">
+            <li><a href="#">Ağırlıkları Yerine Koy</a></li>
+            <li><a href="#">Havlu Kullanmak Zorunlu</a></li>
+            <li><a href="#">Telefonda Konuşmak Yasak</a></li>
+            <li><a href="#">Gizlilik Politikası</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal>
+          <h3>AÇIK KAPI</h3>
+          <ul class="hours-list">
+            <li data-days="1-5" data-open="06:00" data-close="23:00">
+              <span>Pazartesi - Cuma</span> <span>06:00 - 23:00</span>
+            </li>
+            <li data-days="6" data-open="08:00" data-close="20:00">
+              <span>Cumartesi</span> <span>08:00 - 20:00</span>
+            </li>
+            <li data-days="0"><span>Pazar</span> <span class="closed">KAPALI</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal>
+          <h3>KEMİK KADRO</h3>
+          <p>Kampanyalar ve powerlifting yarışmaları için listeye gir.</p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="E-Posta"
+              aria-label="E-posta"
+            />
+            <button type="button" class="newsletter-btn" aria-label="Listeye gir">></button>
+          </form>
+        </div>
+      </div>
+
+      <p class="footer-mark" aria-hidden="true" data-footer-mark>SAĞLIK SPOR</p>
+
+      <div class="footer-bottom">
+        <span>© 2024 SAĞLIK SPOR GYM. TÜM HAKLARI SAKLIDIR.</span>
+        <div class="social-icons">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">YOUTUBE</a>
+          <a href="#">FACEBOOK</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
